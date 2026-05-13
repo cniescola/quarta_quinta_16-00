@@ -49,17 +49,40 @@
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="7"></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
-                            <label class="form-label">DIgite o valor!</label>
-                            <input type="text" class="form-control">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="mb-3">
+                                    <label class="form-label">Valor do produtos</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                   <button type="button" class="btn btn-success w-100">Salvar</button>
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-danger w-100" type="button">Apagar</button>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 d-flex flex-column justify-content-between">
+                    <div class="card p-4 mb-3">
+                        <label class="form-label">Link do produto</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="card p-4 mb-3">
+                        <label class="form-label">Valor de Fabrica</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="card p-4">
+                        <label class="form-label">parcelas do produto</label>
+                        <input type="number" max="12" class="form-control">
+                    </div>
                 </div>
             </div>
         </section>
