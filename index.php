@@ -38,7 +38,7 @@
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="nomeProd">
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100">Salvar</button>
+                                   <button type="button" class="btn btn-success w-100" name="salvar" id="salvar">Salvar</button>
                                 </div>
 
                                 <div>
@@ -89,6 +89,17 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        var btnSalvar = document.querySelector('[name="salvar"]');
+        btnSalvar.addEventListener("click",function(){
+
+            var nomeProd = document.querySelector('[name="nomeProd"]').value;
+            console.log(nomeProd);
+        });
+
+    </script>
 </body>
 
 </html>
