@@ -42,20 +42,20 @@
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="codigoProd">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7"></textarea>
+                            <textarea class="form-control" rows="7" name="descProd"></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="vProd">
                                 </div>
 
                                 <div class="mb-3">
@@ -73,15 +73,15 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="linkProd">
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" name="VFProd">
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control">
+                        <input type="number" max="12" class="form-control" name="pProd">
                     </div>
                 </div>
             </div>
@@ -89,15 +89,25 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
 
-        var btnSalvar = document.querySelector('[name="salvar"]');
-        btnSalvar.addEventListener("click",function(){
+        
 
-            var nomeProd = document.querySelector('[name="nomeProd"]').value;
-            console.log(nomeProd);
+        $('#salvar').click(function(){
+            var nomeProd = $('[name="nomeProd"]').val();
+            var codigoProd = $('[name="codigoProd"]').val();
+            var descProd = $('[name="descProd"]').val();
+            var vProd = $('[name="vProd"]').val();
+            var linkProd = $('[name="linkProd"]').val();
+            var VFProd = $('[name="VFProd"]').val();
+            var pProd = $('[name="pProd"]').val();
+
+            console.log(nomeProd+"\n"+codigoProd+"\n"+descProd+"\n"+vProd+"\n"+linkProd+"\n"+VFProd+"\n"+pProd);
+            
         });
+       
 
     </script>
 </body>
