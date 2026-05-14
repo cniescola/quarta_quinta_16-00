@@ -38,28 +38,28 @@
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control" name="nameProd">
+                            <input type="text" class="form-control" id="nameProd">
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="codprod">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7"></textarea>
+                            <textarea class="form-control" rows="7" id="textname"></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form- control" id="prodvalue">
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100" name="salvar">Salvar</button>
+                                   <button type="button" class="btn btn-success w-100" id="salvar">Salvar</button>
                                 </div>
 
                                 <div>
@@ -73,15 +73,15 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="linkprod">
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" id="fabvalue">
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control">
+                        <input type="number" max="12" class="form-control" id="prodpar">
                     </div>
                 </div>
             </div>
@@ -89,15 +89,45 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
     <script type="text/javascript">
+        
 
-    var btnSalvar = document.querySelector('[name="salvar"]');
-    btnSalvar.addEventListener('click',function(){
+    $('#salvar').click(function(){
 
-        var nameProd = document.querySelector('[name="nameProd"]').value;
-        console.log(nameProd);
+        var nameProd = $('[name="nameProd"]').val();
+        var codprod = $('[name="codprod"]').val();
+
+        console.log(nameProd+"\n"+codprod);
+
     });
+
+
+    // var btnSalvar = document.querySelector('[name="salvar"]');
+    // btnSalvar.addEventListener('click',function(){
+
+    //     var nameProd = document.querySelector('[name="nameProd"]').value;
+    //     console.log(nameProd);
+
+    //     var codprod = document.querySelector('[name="codprod"]').value;
+    //     console.log(codprod);
+
+    //     var prodvalue = document.querySelector('[name="prodvalue"]').value;
+    //     console.log(prodvalue);
+
+    //     var textname = document.querySelector('[name="textname"]').value;
+    //     console.log(textname);
+
+    //     var linkprod = document.querySelector('[name="linkprod"]').value;
+    //     console.log(linkprod);
+
+    //     var fabvalue = document.querySelector('[name="fabvalue"]').value;
+    //     console.log(fabvalue);
+
+    //     var prodpar = document.querySelector('[name="prodpar"]').value;
+    //     console.log(prodpar);
+
+    // });
         
     </script>
 </body>
