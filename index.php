@@ -38,28 +38,28 @@
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="nameProd">
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="codigo">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7"></textarea>
+                            <textarea class="form-control" rows="7" name="descrição"></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form-control" name="nomeProd">
+                                    <input type="text" class="form-control" name="produtoss">
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100">Salvar</button>
+                                   <button type="button" class="btn btn-success w-100" name="Salvar">Salvar</button>
                                 </div>
 
                                 <div>
@@ -73,15 +73,15 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="link">
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" name="valor">
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control">
+                        <input type="number" max="12" class="form-control" name="parcela">
                     </div>
                 </div>
             </div>
@@ -89,16 +89,53 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-4.0.0.js"
+  integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+  crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        var btnSalvar = document.querySelector('[name"Salvar"]');
-        btnSalvar.addEventlistener("click",function(){
+        // var btnSalvar = document.querySelector('[name="Salvar"]');
+        // btnSalvar.addEventListener("click",function(){
             
-            var nomeProd = document.querySelector('[name="nameProd"]').value;
-            //var nomeProd = document.getElementsByName('nomeProd')[0].value;
-            console.log(nomeProd);
+        //     var nomeProd = document.querySelector('[name="nameProd"]').value;
+        //     //var nomeProd = document.getElementsByName('nomeProd')[0].value;
+        //     console.log(nomeProd);
 
+        //      var link = document.querySelector('[name="link"]').value;
+        //     //var link = document.getElementsByName('link')[0].value;
+        //     console.log(link);
+        //      var valor = document.querySelector('[name="valor"]').value;
+        //     //var valor = document.getElementsByName('valor')[0].value;
+        //     console.log(valor);
+        //      var parcela = document.querySelector('[name="parcela"]').value;
+        //     //var parcela = document.getElementsByName('paarcela')[0].value;
+        //     console.log(parcela);
+        //      var descrição = document.querySelector('[name="descrição"]').value;
+        //     //var descrição = document.getElementsByName('descrição')[0].value;
+        //     console.log(descrição);
+        //      var codigo = document.querySelector('[name="codigo"]').value;
+        //     //var codigo = document.getElementsByName('codigo')[0].value;
+        //     console.log(codigo);
+        //      var produtoss = document.querySelector('[name="produtoss"]').value;
+        //     //var produtoss = document.getElementsByName('produtoss')[0].value;
+        //     console.log(produtoss);
+
+        // });
+        $('#Salvar').click(function(){
+            var link = $('[name="link"]').val();
+            var nomeProd = $('[name="nomeProd"]')val();
+            var codigo = $('[name="codigo"]')val();
+            var parcela =$('[name="parcela"]')val();
+            var produtoss = $('[name=""]')val();
+            var descrição = $('[name="descrição"]')val();
+            var valor = $ ('[name="valor"]')val();
+
+            console.log(nomeProd+"\n"+link+"\n"+codigo"\n"+parcela+"\n"+produtoss+"\n"+valor"\n"+descrição);
+
+        
         });
+        
     </script>
 </body>
 
