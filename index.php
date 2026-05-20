@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100" name="Salvar">Salvar</button>
+                                   <button type="button" class="btn btn-success w-100" id="Salvar">Salvar</button>
                                 </div>
 
                                 <div>
@@ -124,18 +124,27 @@
         // });
         $('#Salvar').click(function(){
             var link = $('[name="link"]').val();
-            var nomeProd = $('[name="nomeProd"]')val();
-            var codigo = $('[name="codigo"]')val();
-            var parcela =$('[name="parcela"]')val();
-            var produtoss = $('[name=""]')val();
-            var descrição = $('[name="descrição"]')val();
-            var valor = $ ('[name="valor"]')val();
+            var nomeProd = $('[name="nomeProd"]').val();
+            var codigo = $('[name="codigo"]').val();
+            var parcela =$('[name="parcela"]').val();
+            var produtoss = $('[name="produtoss"]').val();
+            var descrição = $('[name="descrição"]').val();
+            var valor = $('[name="valor"]').val();
 
-            console.log(nomeProd+"\n"+link+"\n"+codigo"\n"+parcela+"\n"+produtoss+"\n"+valor"\n"+descrição);
+            console.log(nomeProd+"\n"+link+"\n"+codigo+"\n"+parcela+"\n"+produtoss+"\n"+valor+"\n"+descrição);
 
-        
+            $.ajax({
+                url:"recebe.php",
+                method:"POST",
+                data:"{'nome','arthur'}",
+                processData: false,
+                contentType: false,
+                success: function(content){
+                    $('#salvar').after(content);
+                }
+            });
         });
-        
+
     </script>
 </body>
 
