@@ -95,10 +95,36 @@
 
     $('#salvar').click(function(){
 
-        var nameProd = $('[name="nameProd"]').val();
-        var codprod = $('[name="codprod"]').val();
+        var nameProd = $('#nameProd').val();
+        var codprod = $('#codprod').val();
+        var prodvalue = $('#prodvalue').val();
+        var textname = $('#textname').val();
+        var linkprod = $('#linkprod').val();
+        var fabvalue = $('#fabvalue').val();
+        var prodpar = $('#prodpar').val();
 
-        console.log(nameProd+"\n"+codprod);
+        console.log(nameProd+"\n"+codprod+"\n"+prodvalue+"\n"+textname+"\n"+linkprod+"\n"+fabvalue+"\n"+prodpar);
+
+        var dados = new FormData();
+
+        dados.append("nome", nameProd);
+        dados.append("codigo",codprod);
+        dados.append("valor",prodvalue);
+        dados.append("descricao", textname);
+        dados.append("link",linkprod);
+        dados.append("fabrica",fabvalue);
+        dados.append("parcelas",prodpar);
+
+        $.ajax({
+            url:"recebe.php",
+            method:"POST",
+            data: dados,
+            processData: false,
+            contentType: false,      
+            success: function( content ){
+                $('#salvar').after(content);
+            }
+        });
 
     });
 
