@@ -105,9 +105,26 @@
             var pProd = $('[name="pProd"]').val();
 
             console.log(nomeProd+"\n"+codigoProd+"\n"+descProd+"\n"+vProd+"\n"+linkProd+"\n"+VFProd+"\n"+pProd);
+
+            var dados = new FormData();
+
+            dados.append("nome",nomeProd);
+            dados.append("codigo",codigoProd);
             
+            $.ajax({
+                url: "recebe.php",
+                method:"POST",
+                data: dados,
+                processData: false,
+                contentType: false,
+                success: function( content ){
+                    $('#salvar').after(content);
+                }
+            });
+
         });
        
+      
 
     </script>
 </body>
