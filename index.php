@@ -32,34 +32,34 @@
 
     <main>
         <section class="container mt-4">
-            <div class="row">
+            <form class="row" method="POST" action="recebe.php">
                 <div class=" card col-lg-8 p-4">
                     <h3 class="h6 form-title">Cadastro de produto</h3>
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control" name="nameProd">
+                            <input type="text" class="form-control" name="nameProd" required>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control" name="codigo">
+                            <input type="text" class="form-control" name="codigo" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7" name="descrição"></textarea>
+                            <textarea class="form-control" rows="7" name="descrição" required></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form-control" name="produtoss">
+                                    <input type="text" class="form-control" name="produtoss" required>
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100" id="Salvar">Salvar</button>
+                                   <button type="submit" class="btn btn-success w-100" id="Salvar">Salvar</button>
                                 </div>
 
                                 <div>
@@ -73,18 +73,18 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control" name="link">
+                        <input type="text" class="form-control" name="link" required>
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control" name="valor">
+                        <input type="number" class="form-control" name="valor" required>
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control" name="parcela">
+                        <input type="number" max="12" class="form-control" name="parcela" required>
                     </div>
                 </div>
-            </div>
+</form>
         </section>
     </main>
 
@@ -94,7 +94,7 @@
   integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
   crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript"> -->
         // var btnSalvar = document.querySelector('[name="Salvar"]');
         // btnSalvar.addEventListener("click",function(){
             
@@ -127,7 +127,7 @@
             var nomeProd = $('[name="nomeProd"]').val();
             var codigo = $('[name="codigo"]').val();
             var parcela =$('[name="parcela"]').val();
-            var produtoss = $('[name="produtoss"]').val();
+            var descrição = $('[name="produtoss"]').val();
             var descrição = $('[name="descrição"]').val();
             var valor = $('[name="valor"]').val();
 
