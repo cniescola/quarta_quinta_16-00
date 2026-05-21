@@ -32,38 +32,38 @@
 
     <main>
         <section class="container mt-4">
-            <div class="row">
+            <form class="row" method="post" action="recebe.php">
                 <div class=" card col-lg-8 p-4">
                     <h3 class="h6 form-title">Cadastro de produto</h3>
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control" name="nomeProd">
+                            <input type="text" class="form-control" name="nomeProd" required>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control" name="codigoProd">
+                            <input type="text" class="form-control" name="codigoProd" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7" name="descProd"></textarea>
+                            <textarea class="form-control" rows="7" name="descProd" required></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form-control" name="vProd">
+                                    <input type="text" class="form-control" name="vProd" required>
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100" name="salvar" id="salvar">Salvar</button>
+                                    <button type="submit" class="btn btn-success w-100" name="salvar" id="salvar">Salvar</button>
                                 </div>
 
                                 <div>
-                                    <button class="btn btn-danger w-100" type="button">Apagar</button>
+                                    <button class="btn btn-danger w-100" type="submit">Apagar</button>
                                 </div>
                             </div>
                         </div>
@@ -84,18 +84,15 @@
                         <input type="number" max="12" class="form-control" name="pProd">
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-
-        
-
-        $('#salvar').click(function(){
+    <!-- <script type="text/javascript">
+        $('#salvar').click(function() {
             var nomeProd = $('[name="nomeProd"]').val();
             var codigoProd = $('[name="codigoProd"]').val();
             var descProd = $('[name="descProd"]').val();
@@ -104,29 +101,31 @@
             var VFProd = $('[name="VFProd"]').val();
             var pProd = $('[name="pProd"]').val();
 
-            console.log(nomeProd+"\n"+codigoProd+"\n"+descProd+"\n"+vProd+"\n"+linkProd+"\n"+VFProd+"\n"+pProd);
+            console.log(nomeProd + "\n" + codigoProd + "\n" + descProd + "\n" + vProd + "\n" + linkProd + "\n" + VFProd + "\n" + pProd);
 
             var dados = new FormData();
 
-            dados.append("nome",nomeProd);
-            dados.append("codigo",codigoProd);
-            
+            dados.append("nomeProd", nomeProd);
+            dados.append("codigoProd", codigoProd);
+            dados.append("descProd", descProd);
+            dados.append("vProd", vProd);
+            dados.append("linkProd", linkProd);
+            dados.append("VFProd", VFProd);
+            dados.append("pProd", pProd);
+
             $.ajax({
                 url: "recebe.php",
-                method:"POST",
+                method: "POST",
                 data: dados,
                 processData: false,
                 contentType: false,
-                success: function( content ){
+                success: function(content) {
                     $('#salvar').after(content);
                 }
             });
 
         });
-       
-      
-
-    </script>
+    </script> -->
 </body>
 
 </html>
