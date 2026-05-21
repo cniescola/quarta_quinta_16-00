@@ -32,38 +32,38 @@
 
     <main>
         <section class="container mt-4">
-            <div class="row">
+            <form class="row" method="post" action="recebe.php">
                 <div class=" card col-lg-8 p-4">
                     <h3 class="h6 form-title">Cadastro de produto</h3>
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control" id="nameProd">
+                            <input type="text" class="form-control" id="nameProd" required>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control" id="codprod">
+                            <input type="text" class="form-control" id="codprod" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7" id="textname"></textarea>
+                            <textarea class="form-control" rows="7" id="textname" required></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form- control" id="prodvalue">
+                                    <input type="text" class="form- control" id="prodvalue" required>
                                 </div>
 
                                 <div class="mb-3">
-                                   <button type="button" class="btn btn-success w-100" id="salvar">Salvar</button>
+                                   <button type="submit" class="btn btn-success w-100" id="salvar">Salvar</button>
                                 </div>
 
                                 <div>
-                                    <button class="btn btn-danger w-100" type="button">Apagar</button>
+                                    <button class="btn btn-danger w-100" type="submit">Apagar</button>
                                 </div>
                             </div>
                         </div>
@@ -73,18 +73,18 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control" id="linkprod">
+                        <input type="text" class="form-control" id="linkprod" required>
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control" id="fabvalue">
+                        <input type="number" class="form-control" id="fabvalue" required>
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control" id="prodpar">
+                        <input type="number" max="12" class="form-control" id="prodpar" required>
                     </div>
                 </div>
-            </div>
+</form>
         </section>
     </main>
 
@@ -93,40 +93,40 @@
     <script type="text/javascript">
         
 
-    $('#salvar').click(function(){
+    // $('#salvar').click(function(){
 
-        var nameProd = $('#nameProd').val();
-        var codprod = $('#codprod').val();
-        var prodvalue = $('#prodvalue').val();
-        var textname = $('#textname').val();
-        var linkprod = $('#linkprod').val();
-        var fabvalue = $('#fabvalue').val();
-        var prodpar = $('#prodpar').val();
+    //     var nameProd = $('#nameProd').val();
+    //     var codprod = $('#codprod').val();
+    //     var prodvalue = $('#prodvalue').val();
+    //     var textname = $('#textname').val();
+    //     var linkprod = $('#linkprod').val();
+    //     var fabvalue = $('#fabvalue').val();
+    //     var prodpar = $('#prodpar').val();
 
-        console.log(nameProd+"\n"+codprod+"\n"+prodvalue+"\n"+textname+"\n"+linkprod+"\n"+fabvalue+"\n"+prodpar);
+    //     console.log(nameProd+"\n"+codprod+"\n"+prodvalue+"\n"+textname+"\n"+linkprod+"\n"+fabvalue+"\n"+prodpar);
 
-        var dados = new FormData();
+    //     var dados = new FormData();
 
-        dados.append("nome", nameProd);
-        dados.append("codigo",codprod);
-        dados.append("valor",prodvalue);
-        dados.append("descricao", textname);
-        dados.append("link",linkprod);
-        dados.append("fabrica",fabvalue);
-        dados.append("parcelas",prodpar);
+    //     dados.append("nome", nameProd);
+    //     dados.append("codigo",codprod);
+    //     dados.append("valor",prodvalue);
+    //     dados.append("descricao", textname);
+    //     dados.append("link",linkprod);
+    //     dados.append("fabrica",fabvalue);
+    //     dados.append("parcelas",prodpar);
 
-        $.ajax({
-            url:"recebe.php",
-            method:"POST",
-            data: dados,
-            processData: false,
-            contentType: false,      
-            success: function( content ){
-                $('#salvar').after(content);
-            }
-        });
+    //     $.ajax({
+    //         url:"recebe.php",
+    //         method:"POST",
+    //         data: dados,
+    //         processData: false,
+    //         contentType: false,      
+    //         success: function( content ){
+    //             $('#salvar').after(content);
+    //         }
+    //     });
 
-    });
+    // });
 
 
     // var btnSalvar = document.querySelector('[name="salvar"]');
