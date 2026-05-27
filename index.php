@@ -38,24 +38,24 @@
                     <div class="row card-body">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o Nome do Produto:</label>
-                            <input type="text" class="form-control" id="nameProd" required>
+                            <input type="text" class="form-control" id="nameProd" name="nameProd" required>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite o codigo do Produto</label>
-                            <input type="text" class="form-control" id="codprod" required>
+                            <input type="text" class="form-control" id="codprod" name="codprod" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7" id="textname" required></textarea>
+                            <textarea class="form-control" rows="7" id="textname" name="textname" required></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-3">
                                     <label class="form-label">Valor do produtos</label>
-                                    <input type="text" class="form- control" id="prodvalue" required>
+                                    <input type="text" class="form- control" id="prodvalue" name="prodvalue" required>
                                 </div>
 
                                 <div class="mb-3">
@@ -73,15 +73,15 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-between">
                     <div class="card p-4 mb-3">
                         <label class="form-label">Link do produto</label>
-                        <input type="text" class="form-control" id="linkprod" required>
+                        <input type="text" class="form-control" id="linkprod" name="linkprod" required>
                     </div>
                     <div class="card p-4 mb-3">
                         <label class="form-label">Valor de Fabrica</label>
-                        <input type="number" class="form-control" id="fabvalue" required>
+                        <input type="number" class="form-control" id="fabvalue" name="fabvalue" required>
                     </div>
                     <div class="card p-4">
                         <label class="form-label">parcelas do produto</label>
-                        <input type="number" max="12" class="form-control" id="prodpar" required>
+                        <input type="number" max="12" class="form-control" id="prodpar" name="prodpar" required>
                     </div>
                 </div>
 </form>
