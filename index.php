@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
 
+<body>
     <header class="container-fluid card">
         <nav class="container-fluid p-4">
             <ul class="nav justify-content-center">

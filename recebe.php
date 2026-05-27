@@ -9,17 +9,22 @@
         $VFProd = $_POST['VFProd'];
         $pProd = $_POST['pProd'];
 
-        
         $host = "localhost:3306";
         $usuario = "root";
         $senha = "cniaraguari85";
-        $db = "dbdados";
+        $db = "dbteste";
 
         $con = new mysqli($host,$usuario,$senha,$db);
+        $cadastra = "INSERT INTO `produtos` (`id`, `nomeProd`, `codigoProd`, `descProd`, `vProd`, `linkProd`, `VFProd`, `pProd`) VALUES (NULL, '$nomeProd', '$codigoProd', '$descProd', '$vProd', '$linkProd', '$VFProd', '$pProd')";
 
-        $registro = "INSERT INTO `produtos` (id,nomeProd,codigoProd,descProd,vProd,linkProd,VFProd,pProd) VALUES (NULL,'$nomeProd','$codigoProd','$descProd','$vProd','$linkProd','$VFProd','$pProd')";
+        $cadastra = mysqli_query($con,$cadastra);
 
-        $cadastra = mysqli_query($con,"");
+        if(mysqli_affected_rows($con)){
+            echo "cadastrado com sucesso";
+        }else{
+            echo "Cadastro não realizado";
+        }
+       
         
 
     }
