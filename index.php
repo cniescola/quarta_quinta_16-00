@@ -95,7 +95,7 @@
   crossorigin="anonymous"></script>
 
     <!-- <script type="text/javascript"> -->
-        // var btnSalvar = document.querySelector('[name="Salvar"]');
+        <!-- // var btnSalvar = document.querySelector('[name="Salvar"]');
         // btnSalvar.addEventListener("click",function(){
             
         //     var nomeProd = document.querySelector('[name="nameProd"]').value;
@@ -143,7 +143,7 @@
                     $('#salvar').after(content);
                 }
             });
-        });
+        }); -->
 
     </script>
 </body>
