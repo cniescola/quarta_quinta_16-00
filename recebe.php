@@ -2,10 +2,10 @@
     if(isset($_POST['nameProd'])){
         $valor = $_POST['valor'];
         $link = $_POST['link'];  
-        $nomeProd = $_POST['nameProd'];
+        $nameProd = $_POST['nameProd'];
         $codigo = $_POST['codigo'];
         $parcela = $_POST['parcela'];
-        $descrição = $_POST['descrição'];
+        $descricao = $_POST['descricao'];
         $produtoss = $_POST['produtoss'];
         // echo $valor."\n";
         // echo$descrição;
@@ -22,7 +22,7 @@
         $db ="dbteste";
 
         $con = new mysqli($host,$usuario,$senha,$db);
-        $cadrasta = "INSERT AUTO `produtos` (`id`,`valor`,`link`,`nomeProd`,`codigo`,`parcela`,`descrição`,`produtoss`) VALUES ( NULL,'$valor','$link','$nomeProd','$codigo','$parcela','$descricão','$produtoss')";
+        $cadrasta = "INSERT AUTO `produtos` (`id`,`valor`,`link`,`nomeProd`,`codigo`,`parcela`,`descricao`,`produtoss`) VALUES ( NULL,'$valor','$link','$nomeProd','$codigo','$parcela','$descricão','$produtoss')";
 
         $cadrasta = mysqli_query($con,$cadrasta);
 

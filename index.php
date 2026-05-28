@@ -49,7 +49,7 @@
                     <div class="row">
                         <div class="col-lg-6 mb-3">
                             <label class="form-label">Digite a descrição do produto</label>
-                            <textarea class="form-control" rows="7" name="descrição" required></textarea>
+                            <textarea class="form-control" rows="7" name="descricao" required></textarea>
                         </div>
                         <div class="col-lg-6 mb-3">
                             <div class="d-flex flex-column justify-content-between h-100">
