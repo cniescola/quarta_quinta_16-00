@@ -11,25 +11,30 @@
      <header class="container-fluid card">
         <nav class="container-fluid p-4">
             <ul class="nav justify-content-center">
-                <lu class="nav-item">
-                    <a class="nav-link Active" aria-current="page" href="#">Login</a>
-                </lu>
-                <la class="nav-item">
-                    <a class="nav-link" href="#">Acesso</a>
-                </la>
-     <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
+              <lu class="nav-item">
+                <a class="nav-link Active" aria-current="page" href="#">Cadrasto</a>
+              </lu>
+                  <la class="nav-item">
+                     <a class="nav-link" href="#">Acesso</a>
+                  </la>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Info</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Fora de área</a>
-                </li>
+                  </li>
             </ul>
-        <nav>
+          <nav>
+        <form>
       <header>
           <main>
         <section class="container mt-4" 90%>
                     <h3 class="h6 form-title">Digite as suas informações</h3>
+                    
         <section>
+          <input>
+          
+          <input>
           <main>
   </body>
 </html>
