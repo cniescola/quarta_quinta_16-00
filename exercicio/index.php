@@ -12,14 +12,14 @@
         <section class="d-flex justify-content-center container mt-5">
             <form class="d-flex justify-content-center w-100" method="post" action="recebe.php">
                 <div class="card col-sm-5 p-5">
-                    <h3 class="h6 form-title">Cadastro de Email</h3>
+                    <h3 class="h5 form-title text-center">Cadastro de Email</h3>
                     <div class="row card-body">
                         <div class="col-lg-15 mb-4">
                             <label class="form-label">Email:</label>
                             <input type="text" class="form-control" name="email"></input>
                         <div class="col-lg-15 mb-2">
                             <label class="form-label">Senha:</label>
-                            <input type="text" class="form-control" name="senha"></input>
+                            <input type="password" class="form-control" name="senha"></input>
                         </div>  
                         </div>
                     <div class="mb-2">
