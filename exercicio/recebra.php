@@ -1,5 +1,5 @@
 <?php
-    if(isset($POST['usuario'])){
+    if(isset($POST['clientes'])){
         $usurario = $_POST['USUARIO'];
         $codigo = $_POST['CODIGO'];
 
