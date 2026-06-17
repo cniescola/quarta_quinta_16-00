@@ -4,13 +4,8 @@
         $Email = $_POST['Email'];
         $senha = $_POST['senha'];
 
-        $host = "localhost:3306";
-        $usuario = "root";
-        $senha = "cniaraguari85";
-        $db = "dbcadastro";
-
-        $con = new mysqli($host,$usuario,$senha,$db);
-        $cadastra = "INSERT INTO `usuarios` (`id`, `email`, `nome`, `senha`) VALUES (NULL,'$Email','$Uname','$senha')";
+        include "conexao.php";
+        $cadastra = "INSERT INTO `usuarios` (`id`, `email`, `uname`, `senha`) VALUES (NULL,'$Email','$Uname','$senha')";
 
         $cadastra = mysqli_query($con,$cadastra);
 
@@ -21,3 +16,5 @@
         }
     }
 ?>
+    <a href="index.php" class="btn btn-success">Voltar</a>
+    <a href="logados.php" class="btn btn-success">Listar</a>
