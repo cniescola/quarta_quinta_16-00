@@ -19,8 +19,28 @@
   </head>
   <body>
     
-    <main class="container">
-        <table class="table table-dark table-striped">
+    <header class="container-fluid card">
+
+        <nav class="container-fluid p-4">
+            <a class="btn btn primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Company Name
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Company Name</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+        </div>
+        <div class="offcanvas-body">
+            teste
+        </div>
+    </div>
+        </nav>
+
+    </header> 
+
+    <main class="container position-relative">
+        <table class="table table-striped ">
             <thead>
                 <th>email</th>
                 <th>username</th>
