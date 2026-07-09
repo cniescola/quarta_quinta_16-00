@@ -4,9 +4,10 @@
         $email = $_POST['email'];
         $uname = $_POST['uname'];
         $senha = $_POST['senha'];
+        $selecionar = $_POST['selecionar'];
 
         include "conexao.php";
-        $cadastra = "INSERT INTO `jogos` (`id`, `jogo`, `email`, `uname`, `senha`) VALUES (NULL, '$jogo', '$email', '$uname', '$senha')";
+        $cadastra = "INSERT INTO `jogos` (`id`, `jogo`, `email`, `uname`, `senha`, `selecionar`) VALUES (NULL, '$jogo', '$email', '$uname', '$senha', '$selecionar')";
         
         $cadastra = mysqli_query($con,$cadastra);
 

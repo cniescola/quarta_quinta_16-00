@@ -18,6 +18,27 @@
   </head>
   <body>
     
+    <header class="container-fluid card">
+
+        <nav class="container-fluid p-4">
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Botão
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Mensagem da tabela</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+        </div>
+        <div class="offcanvas-body">
+            oi
+        </div>
+    </div>
+        </nav>
+
+    </header>
+
+
     <main class="container position-relative">
         <table class="table table-striped">
             <thead>
@@ -25,6 +46,7 @@
                 <th>email</th>
                 <th>usuario</th>
                 <th>senha</th>
+                <th>pagamento</th>
             </thead>
 
             <tbody>
@@ -38,6 +60,7 @@
                         <td><?php echo $exibe['email']; ?></td>
                         <td><?php echo $exibe['uname']; ?></td>
                         <td><?php echo $exibe['senha']; ?></td>
+                        <td><?php echo $exibe['selecionar']; ?></td>
                     </tr>
 
                     <?php
