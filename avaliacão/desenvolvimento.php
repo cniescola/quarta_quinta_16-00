@@ -13,13 +13,13 @@
        <a class="nav-link" href="#">Informações Pessoais </a>
    </header> 
     <section class="container d-flex justify-content-center">  
-          <form action="recebra.php" method="post" class="card p-4 col-4" style="box-shadow:3px 5px 16px #00000038">>
+          <form class="row" method="POST" action="rezebera.php" class ="card p-4 col-4 style="box-shadow:3px 5px 16px #00000038">>
             <table class="table table-dark table-striped">
                 <div class="row mb-3">
                    <label class="form-label">Senha:</label>
                    <input type="password" name="senha" class="form-control">
                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                   <input type="password" name="email"  class="form-control">
+                   <input type="email" name="email"  class="form-control">
                    <label class="form-label">CPF:</label>
                    <input type="password" name="codigo"  class="form-control">
                  </div>
