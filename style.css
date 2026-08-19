@@ -1,0 +1,116 @@
+body{
+
+    width:100%;
+    height:100vh;
+    background-color:turquoise;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+a{
+
+    width:300px;
+    height:100px;
+    text-decoration:none;
+    border:1px solid;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    
+}
+
+.sp1{
+
+    position:absolute;
+    animation:animate1 1.5s infinite;
+    animation-delay:3.9s;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:red;
+    transform:translateX(-100%);
+}
+
+.sp2{
+    position:absolute;
+    animation:animate2 1.5s infinite;
+    top: 0;
+    right:0;
+    width:2px;
+    height:100%;
+    background-color:red;
+    transform:translateY(-100%);
+
+}
+
+.sp3{
+    position:absolute;
+    animation:animate3 1.5s infinite;
+    animation-delay:1.2s;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:red;
+    transform:translateX(100%);
+
+}
+
+.sp4{
+    
+    position:absolute;
+    animation:animate4 1.5s infinite;
+    animation-delay:2.6s;
+    left: 0;
+    top:0;
+    width:2px;
+    height:100%;
+    background-color:red;
+    transform:translateY(100%);
+}
+
+@keyframes animate1{
+    0%{
+        transform:translateX(-100%);
+        background-color:white;
+    }
+    100%{
+        transform:translateX(100%);
+    }
+}
+
+@keyframes animate2{
+    0%{
+        transform:translateY(-100%);
+        background-color:white;
+    }
+    100%{
+        transform:translateY(100%);
+    }
+}
+
+@keyframes animate3{
+    0%{
+        transform:translateX(100%);
+        background-color:white;
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+@keyframes animate4{
+    0%{
+        transform:translateY(100%);
+        background-color:white;
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}
+
