@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: consolas;
@@ -65,6 +65,7 @@ body{
     animation: animateAfter 4s linear infinite;
     animation-delay: calc(1s * var(--i));
 }
+
 
 @keyframes animateAfter{
     0%,12.5%{
